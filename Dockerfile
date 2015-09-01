@@ -19,4 +19,4 @@ RUN git clone http://github.com/IGS/OSDF osdf
 
 WORKDIR /build/osdf
 
-CMD git pull &&/usr/bin/ant clean deb && cp dist/* /export/
+CMD git pull && /usr/bin/ant clean deb && cp dist/* /export/
