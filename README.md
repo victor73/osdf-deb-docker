@@ -14,7 +14,9 @@ Then run the container and provide a volume to the container that it will use
 as "/export". In this example, we are providing the host's /tmp directory to
 the container.
 
-  $ docker run -v /tmp:/export osdf_deb_build
+  $ docker run --rm=true -v /tmp:/export osdf_deb_build
 
 After the process completes, there should be a .tar.gz as well as a .deb file
 in the directory that was used for the volume (/tmp in this example).
+The --rm option causes the container to be removed after the generation of
+the deb and tarball are complete and copied.
