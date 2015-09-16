@@ -14,9 +14,5 @@ RUN apt-get update
 RUN apt-get install -y software-properties-common git dh-make build-essential devscripts fakeroot debootstrap pbuilder subversion openjdk-7-jre ant
 
 USER osdf
-WORKDIR /build
-RUN git clone http://github.com/IGS/OSDF osdf
 
-WORKDIR /build/osdf
-
-CMD git pull && /usr/bin/ant clean deb && cp /build/osdf/dist/* /export/
+CMD git clone http://github.com/IGS/OSDF /build/osdf && cd /build/osdf && git pull && /usr/bin/ant clean deb && cp dist/* /export/
