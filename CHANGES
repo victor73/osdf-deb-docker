@@ -1,3 +1,8 @@
+0.2
+  * Changed base container to Ubuntu 18.04
+
+  -- Victor <victor73@github.com>  Fri, 31 May 2019 10:00:00 -0400
+
 0.1
   * Initial release
 
